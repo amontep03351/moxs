@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom animation for multi-layer radar loading */
+        @keyframes radar {
+            0% {
+                transform: scale(0.5);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1.4);
+                opacity: 0;
+            }
+        }
+
+        .radar {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(0, 128, 0, 0.2);
+            animation: radar 1.5s linear infinite;
+            z-index: 10; /* Ensures radar is above the background */
+        }
+
+        .radar::after,
+        .radar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+        }
+
+        .radar::after {
+            border: 5px solid rgba(0, 128, 0, 0.5);
+            animation: radar 1.5s linear infinite;
+            animation-delay: 0.3s;
+        }
+
+        .radar::before {
+            border: 5px solid rgba(0, 128, 0, 0.3);
+            animation: radar 1.5s linear infinite;
+            animation-delay: 0.6s;
+        }
+
+        /* Background image styling */
+        .background-image {
+            background-image: url('img/aerial-clean-top-view-of-the-city-map-with-street-and-river-016-vector.jpg'); /* Change this to your background image URL */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 5%;
+        }
+    </style>
+    <title>ขายขยะรีไซเคิล</title>
+</head>
+
+<body class="bg-gray-100 ">
+    <div class="container mx-auto   mb-20 p-5">
+        <!-- Top Section with Multi-Layer Radar Loading Animation -->
+        <div class="flex items-center justify-center  background-image  ">
+            <div class="radar"></div>
+            
+        </div>
+
+        <!-- Bottom Section for Buyers List -->
+        <div class="mt-8">
+            <h1 class="text-2xl font-bold mb-4">ผู้ซื้อขยะบริเวณใกล้เคียง</h1>
+            <ul class="space-y-6">
+                <!-- Buyer 1 -->
+                <li class="bg-white shadow-lg rounded-lg p-4 flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-16 h-16 rounded-full" src="img/1517537112105.jpg" alt="ผู้ซื้อ 1">
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-xl font-semibold">ผู้ซื้อ 1</h2>
+                        <p class="text-gray-600">ที่อยู่: 123 ถนนซอย 1</p>
+                        <div class="flex items-center">
+                            <!-- Star Ratings -->
+                            <span class="text-yellow-500">&#9733;</span>
+                            <span class="text-yellow-500">&#9733;</span>
+                            <span class="text-yellow-500">&#9733;</span>
+                            <span class="text-yellow-500">&#9733;</span>
+                            <span class="text-gray-300">&#9733;</span>
+                        </div>
+                    </div>
+                    <a href="#" class="text-green-500 hover:underline">ติดต่อ</a>
+                </li>
+
+                <!-- Buyer 2 -->
+                <li class="bg-white shadow-lg rounded-lg p-4 flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-16 h-16 rounded-full" src="img/images.jpg" alt="ผู้ซื้อ 2">
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-xl font-semibold">ผู้ซื้อ 2</h2>
+                        <p class="text-gray-600">ที่อยู่: 456 ถนนซอย 2</p>
+                        <div class="flex items-center">
+                            <!-- Star Ratings -->
+                            <span class="text-yellow-500">&#9733;</span>
+                            <span class="text-yellow-500">&#9733;</span>
+                            <span class="text-yellow-500">&#9733;</span>
+                            <span class="text-yellow-500">&#9733;</span>
+                            <span class="text-yellow-500">&#9733;</span>
+                        </div>
+                    </div>
+                    <a href="#" class="text-green-500 hover:underline">ติดต่อ</a>
+                </li>
+
+                <!-- Buyer 3 -->
+                <li class="bg-white shadow-lg rounded-lg p-4 flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-16 h-16 rounded-full" src="img/profile-image-41372.png" alt="ผู้ซื้อ 3">
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-xl font-semibold">ผู้ซื้อ 3</h2>
+                        <p class="text-gray-600">ที่อยู่: 789 ถนนซอย 3</p>
+                        <div class="flex items-center">
+                            <!-- Star Ratings -->
+                            <span class="text-yellow-500">&#9733;</span>
+                            <span class="text-yellow-500">&#9733;</span>
+                            <span class="text-yellow-500">&#9733;</span>
+                            <span class="text-gray-300">&#9733;</span>
+                            <span class="text-gray-300">&#9733;</span>
+                        </div>
+                    </div>
+                    <a href="#" class="text-green-500 hover:underline">ติดต่อ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+         <!-- Bottom Navigation -->
+         <div class="fixed bottom-0 left-0 right-0 bg-blue-200 shadow-lg">
+            <div class="flex justify-around py-4">
+                <!-- Home Button -->
+                <a href="index.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
+                    <svg class="h-8 w-8 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
+                        <polyline points="17 2 12 7 7 2" />
+                    </svg>
+                    <span class="text-xs font-medium">หน้าหลัก</span>
+                </a>
+  
+                <!-- Waiting Button -->
+                <a href="waiting.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
+                    <svg class="h-8 w-8 text-red-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" />
+                        <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" />
+                        <line x1="12" y1="12" x2="20" y2="7.5" />
+                        <line x1="12" y1="12" x2="12" y2="21" />
+                        <line x1="12" y1="12" x2="4" y2="7.5" />
+                        <line x1="16" y1="5.25" x2="8" y2="9.75" />
+                    </svg>
+                    <span class="text-xs font-medium">รอรับ</span>
+                </a>
+  
+                <!-- History Button -->
+                <a href="history.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
+                    <svg class="h-8 w-8 text-red-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" />
+                        <path d="M15 4.55a8 8 0 0 0 -6 14.9m0 -4.45v5h-5" />
+                        <path d="M13 19.95a8 8 0 0 0 5.3 -12.8" stroke-dasharray=".001 4.13" />
+                    </svg>
+                    <span class="text-xs font-medium">ประวัติ</span>
+                </a>
+  
+                <!-- Account Button -->
+                <a href="account.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
+                    <svg class="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-xs font-medium">บัญชี</span>
+                </a>
+            </div>
+          </div>
+    <script>
+        const searchButton = document.getElementById('searchButton');
+        const stopButton = document.getElementById('stopButton');
+
+        searchButton.addEventListener('click', () => {
+            searchButton.classList.add('hidden');
+            stopButton.classList.remove('hidden');
+            // Add your search logic here
+            console.log('Searching for buyers...');
+        });
+
+        stopButton.addEventListener('click', () => {
+            stopButton.classList.add('hidden');
+            searchButton.classList.remove('hidden');
+            // Add your stop search logic here
+            console.log('Stopped searching for buyers.');
+        });
+    </script>
+</body>
+
+</html>
