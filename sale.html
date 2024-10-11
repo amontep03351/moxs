@@ -7,14 +7,18 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-  
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100;400;600&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <style>
-          body {
-         font-family: "Sarabun", sans-serif;
-         font-weight: 100;
-         font-style: normal;
-     }
+        body {
+            font-family: "Sarabun", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
         /* Custom animation for multi-layer radar loading */
         @keyframes radar {
             0% {
@@ -35,7 +39,7 @@
             border-radius: 50%;
             background: rgba(0, 128, 0, 0.2);
             animation: radar 1.5s linear infinite;
-            z-index: 10; /* Ensures radar is above the background */
+            z-index: 0; /* Ensures radar is above the background */
         }
 
         .radar::after,
@@ -63,7 +67,7 @@
 
         /* Background image styling */
         .background-image {
-            background-image: url('img/aerial-clean-top-view-of-the-city-map-with-street-and-river-016-vector.jpg'); /* Change this to your background image URL */
+            background-image: url('img/aerial-clean-top-view-of-the-city-map-with-street-and-river-016-vector.jpg');
             background-size: cover;
             background-position: center;
             position: relative;
@@ -71,16 +75,34 @@
             height: 100%;
             border-radius: 5%;
         }
+         /* Style for modal */
+         .modal {
+            z-index: 9999;
+            transition: all 0.3s ease;
+        }
+
+        /* Custom styles for button */
+        .btn {
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #2563eb;
+        }
+
+        .review-item {
+            background-color: #f8fafc;
+            border-left: 4px solid #3b82f6; /* blue-500 */
+        }
     </style>
     <title>ขายขยะรีไซเคิล</title>
 </head>
 
-<body class="bg-gray-100 ">
-    <div class="container mx-auto   mb-20 p-5">
+<body class="bg-gray-100">
+    <div class="container mx-auto mb-20 p-5">
         <!-- Top Section with Multi-Layer Radar Loading Animation -->
-        <div class="flex items-center justify-center  background-image  ">
+        <div class="flex items-center justify-center background-image">
             <div class="radar"></div>
-            
         </div>
 
         <!-- Bottom Section for Buyers List -->
@@ -104,7 +126,10 @@
                             <span class="text-gray-300">&#9733;</span>
                         </div>
                     </div>
-                    <a href="#" class="text-green-500 hover:underline">ติดต่อ</a>
+                    <!-- Button to open the modal --> 
+                    <button class="btn bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg transform transition duration-200 hover:scale-105" onclick="showModal('บริการซื้อขยะ', '123 ถนนเก็บขยะ, เมืองไทย', ['บริการรวดเร็วและสะดวกสบายมาก', 'ได้ราคาที่ดีและยุติธรรม', 'พนักงานสุภาพและช่วยเหลือดี'])">
+                        ติดต่อ
+                    </button>
                 </li>
 
                 <!-- Buyer 2 -->
@@ -124,7 +149,10 @@
                             <span class="text-yellow-500">&#9733;</span>
                         </div>
                     </div>
-                    <a href="#" class="text-green-500 hover:underline">ติดต่อ</a>
+                    <!-- Button to open the modal -->
+                    <button class="btn bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg transform transition duration-200 hover:scale-105" onclick="showModal('บริการซื้อขยะ', '123 ถนนเก็บขยะ, เมืองไทย', ['บริการรวดเร็วและสะดวกสบายมาก', 'ได้ราคาที่ดีและยุติธรรม', 'พนักงานสุภาพและช่วยเหลือดี'])">
+                        ติดต่อ
+                    </button>
                 </li>
 
                 <!-- Buyer 3 -->
@@ -144,72 +172,110 @@
                             <span class="text-gray-300">&#9733;</span>
                         </div>
                     </div>
-                    <a href="#" class="text-green-500 hover:underline">ติดต่อ</a>
+                    <!-- Button to open the modal -->
+                    <button class="btn bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg transform transition duration-200 hover:scale-105" onclick="showModal('บริการซื้อขยะ', '123 ถนนเก็บขยะ, เมืองไทย', ['บริการรวดเร็วและสะดวกสบายมาก', 'ได้ราคาที่ดีและยุติธรรม', 'พนักงานสุภาพและช่วยเหลือดี'])">
+                        ติดต่อ
+                    </button>
                 </li>
             </ul>
         </div>
     </div>
-         <!-- Bottom Navigation -->
-         <div class="fixed bottom-0 left-0 right-0 bg-blue-200 shadow-lg">
-            <div class="flex justify-around py-4">
-                <!-- Home Button -->
-                <a href="index.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
-                    <svg class="h-8 w-8 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
-                        <polyline points="17 2 12 7 7 2" />
-                    </svg>
-                    <span class="text-xs font-medium">หน้าหลัก</span>
-                </a>
-  
-                <!-- Waiting Button -->
-                <a href="waiting.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
-                    <svg class="h-8 w-8 text-red-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" />
-                        <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" />
-                        <line x1="12" y1="12" x2="20" y2="7.5" />
-                        <line x1="12" y1="12" x2="12" y2="21" />
-                        <line x1="12" y1="12" x2="4" y2="7.5" />
-                        <line x1="16" y1="5.25" x2="8" y2="9.75" />
-                    </svg>
-                    <span class="text-xs font-medium">รอรับ</span>
-                </a>
-  
-                <!-- History Button -->
-                <a href="history.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
-                    <svg class="h-8 w-8 text-red-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" />
-                        <path d="M15 4.55a8 8 0 0 0 -6 14.9m0 -4.45v5h-5" />
-                        <path d="M13 19.95a8 8 0 0 0 5.3 -12.8" stroke-dasharray=".001 4.13" />
-                    </svg>
-                    <span class="text-xs font-medium">ประวัติ</span>
-                </a>
-  
-                <!-- Account Button -->
-                <a href="account.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
-                    <svg class="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span class="text-xs font-medium">บัญชี</span>
-                </a>
+
+    <!-- Modal Structure --> 
+    <div id="buyerModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-end justify-center hidden animate__animated  animate__bounceInUp">
+        <div class="modal bg-white rounded-lg shadow-lg w-full h-4/5 p-8">
+            <h2 id="modalTitle" class="text-2xl font-bold mb-4 text-blue-600"></h2>
+            <p id="modalAddress" class="mb-2 text-gray-700"></p>
+            <p id="distance" class="mb-4 text-gray-500"></p>
+            <ul id=" " class="list-disc list-inside mb-4 space-y-2">
+                <li>พลาสติก PET - 20 บาท/กิโลกรัม</li>
+                <li>กระดาษ - 10 บาท/กิโลกรัม</li>
+                <li>เหล็ก - 15 บาท/กิโลกรัม</li>
+                <li>อลูมิเนียม - 30 บาท/กิโลกรัม</li>
+                <li>เศษอาหาร - 5 บาท/กิโลกรัม</li>
+            </ul>
+            <h3 class="text-lg font-semibold mb-2 text-gray-800">รีวิวจากผู้ซื้อ:</h3>
+            
+            <ul id="modalItems" class="list-disc list-inside mb-4 space-y-2">
+                <!-- Review items will be populated here -->
+            </ul>
+            <div class="flex justify-end">
+                <button onclick="sell()" class="bg-green-500 text-white px-4 py-2 rounded-lg mr-2 hover:bg-green-600">ขาย</button>
+                <button onclick="closeModal()" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">ปิด</button>
             </div>
-          </div>
+        </div>
+    </div>
+
+    <br><br><br>
+    <!-- Back Navigation Button -->
+    <div class="fixed bottom-0 left-0 right-0 bg-blue-200 shadow-lg">
+        <div class="flex justify-around py-4">
+            <!-- Home Button -->
+            <a href="index.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
+                <svg class="h-8 w-8 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
+                    <polyline points="17 2 12 7 7 2" />
+                </svg>
+                <span class="text-xs font-medium">หน้าหลัก</span>
+            </a>
+
+            <!-- Waiting Button -->
+            <a href="waiting.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
+                <svg class="h-8 w-8 text-red-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" />
+                    <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" />
+                    <line x1="12" y1="12" x2="20" y2="7.5" />
+                    <line x1="12" y1="12" x2="12" y2="21" />
+                    <line x1="12" y1="12" x2="4" y2="7.5" />
+                    <line x1="16" y1="5.25" x2="8" y2="9.75" />
+                </svg>
+                <span class="text-xs font-medium">รอรับ</span>
+            </a>
+
+            <!-- History Button -->
+            <a href="history.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
+                <svg class="h-8 w-8 text-red-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" />
+                    <path d="M15 4.55a8 8 0 0 0 -6 14.9m0 -4.45v5h-5" />
+                    <path d="M13 19.95a8 8 0 0 0 5.3 -12.8" stroke-dasharray=".001 4.13" />
+                </svg>
+                <span class="text-xs font-medium">ประวัติ</span>
+            </a>
+
+            <!-- Account Button -->
+            <a href="account.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
+                <svg class="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-xs font-medium">บัญชี</span>
+            </a>
+        </div>
+    </div>
+
     <script>
-        const searchButton = document.getElementById('searchButton');
-        const stopButton = document.getElementById('stopButton');
+        function showModal(name, address, reviews) {
+            document.getElementById('modalTitle').innerText = name;
+            document.getElementById('modalAddress').innerText = 'ที่อยู่: ' + address;
+            document.getElementById('distance').innerText = 'ระยะทาง: 5 กม.'; // แสดงระยะทางที่ต้องการ
+            const modalItems = document.getElementById('modalItems');
+            modalItems.innerHTML = ''; // ล้างข้อมูลเก่า
+            reviews.forEach(review => {
+                const listItem = document.createElement('li');
+                listItem.className = "review-item p-2 rounded-lg";
+                listItem.innerText = review;
+                modalItems.appendChild(listItem);
+            });
+            document.getElementById('buyerModal').classList.remove('hidden');
+        }
 
-        searchButton.addEventListener('click', () => {
-            searchButton.classList.add('hidden');
-            stopButton.classList.remove('hidden');
-            // Add your search logic here
-            console.log('Searching for buyers...');
-        });
+        function closeModal() {
+            document.getElementById('buyerModal').classList.add('hidden');
+        }
 
-        stopButton.addEventListener('click', () => {
-            stopButton.classList.add('hidden');
-            searchButton.classList.remove('hidden');
-            // Add your stop search logic here
-            console.log('Stopped searching for buyers.');
-        });
+        function sell() {
+            alert('ทำการขายแล้ว!');
+            closeModal(); // ปิดโมดัลหลังจากขาย
+        }
     </script>
 </body>
 
