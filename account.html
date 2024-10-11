@@ -7,93 +7,115 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-  
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
-      body {
-          font-family: "Sarabun", sans-serif;
-          font-weight: 100;
-          font-style: normal;
-      }
-      /* Animation for button hover effect */
-      .hover-grow:hover {
-        transform: scale(1.05);
-        transition: transform 0.3s ease;
-      }
+        body {
+            font-family: "Sarabun", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        /* Animation for button hover effect */
+        .hover-grow:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
     </style>
     <title>บัญชีผู้ใช้</title>
 </head>
 
 <body class="bg-gray-100">
+    <!-- Top Section -->
+    <div class="bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 text-white p-6 rounded-b-3xl shadow-lg">
+        <div class="flex flex-col sm:flex-row justify-between items-center">
+            <h1 class="text-3xl sm:text-4xl font-extrabold">สวัสดีตอนบ่าย</h1>
+            <div class="mt-4 sm:mt-0 bg-white rounded-full p-2 shadow-2xl transform transition hover:scale-105">
+                <img src="img/logo.png" alt="User Icon" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full">
+            </div>
+        </div>
+    </div>
+
     <div class="container mx-auto p-6">
         <h1 class="text-4xl font-bold mb-6 text-center text-gray-800">ข้อมูลบัญชีผู้ใช้</h1>
 
         <!-- User Profile Card -->
         <div class="bg-white shadow-lg rounded-lg p-6 md:flex md:items-center">
-            <img src="https://via.placeholder.com/100" alt="Profile Picture" class="rounded-full mb-4 md:mb-0 md:mr-4 mx-auto">
+            <img src="img/profile-image-41372.png" alt="Profile Picture" class="rounded-full mb-4 md:mb-0 md:mr-4 mx-auto">
             <div class="text-center md:text-left">
                 <h2 class="text-2xl font-semibold text-gray-800">ชื่อผู้ใช้: สมชาย ใจดี</h2>
                 <p class="text-gray-600">เบอร์โทร: 012-345-6789</p>
                 <p class="text-gray-600">อีเมล: somchai@example.com</p>
                 <p class="text-gray-600">วันที่ลงทะเบียน: 2024-10-11</p>
             </div>
+             <!-- Edit Button with Pencil Icon -->
+            <div class="flex justify-center mt-4">
+              <a href="edit-profile.html" class="flex items-center text-blue-600 hover:text-blue-500">
+                  <i class="fas fa-pencil-alt fa-lg mr-2"></i>
+                  <span>แก้ไขข้อมูล</span>
+              </a>
+          </div>
         </div>
 
         <!-- Address Section -->
         <div class="bg-white shadow-lg rounded-lg p-6 mt-6">
             <h3 class="text-xl font-semibold text-gray-800 mb-2">ที่อยู่</h3>
             <p class="text-gray-600">123/45 หมู่ 6 ถนนสุขสวัสดิ์<br>ตำบลสำโรง อำเภอเมือง<br>จังหวัดสมุทรปราการ 10270</p>
-        </div>
-
-        <!-- Edit Button -->
-        <div class="flex justify-center mt-4">
-            <a href="edit-profile.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition">แก้ไขข้อมูล</a>
-        </div>
-
-       
-          <!-- Bottom Navigation -->
-        <div class="fixed bottom-0 left-0 right-0 bg-blue-200 shadow-lg">
-          <div class="flex justify-around py-4">
-              <!-- Home Button -->
-              <a href="index.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
-                  <svg class="h-8 w-8 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
-                      <polyline points="17 2 12 7 7 2" />
-                  </svg>
-                  <span class="text-xs font-medium">หน้าหลัก</span>
-              </a>
-
-              <!-- Waiting Button -->
-              <a href="waiting.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
-                  <svg class="h-8 w-8 text-red-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" />
-                      <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" />
-                      <line x1="12" y1="12" x2="20" y2="7.5" />
-                      <line x1="12" y1="12" x2="12" y2="21" />
-                      <line x1="12" y1="12" x2="4" y2="7.5" />
-                      <line x1="16" y1="5.25" x2="8" y2="9.75" />
-                  </svg>
-                  <span class="text-xs font-medium">รอรับ</span>
-              </a>
-
-              <!-- History Button -->
-              <a href="history.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
-                  <svg class="h-8 w-8 text-red-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" />
-                      <path d="M15 4.55a8 8 0 0 0 -6 14.9m0 -4.45v5h-5" />
-                      <path d="M13 19.95a8 8 0 0 0 5.3 -12.8" stroke-dasharray=".001 4.13" />
-                  </svg>
-                  <span class="text-xs font-medium">ประวัติ</span>
-              </a>
-
-              <!-- Account Button -->
-              <a href="account.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
-                  <svg class="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span class="text-xs font-medium">บัญชี</span>
+             <!-- Edit Button with Pencil Icon -->
+            <div class="flex justify-center mt-4">
+              <a href="edit-profile.html" class="flex items-center text-blue-600 hover:text-blue-500">
+                  <i class="fas fa-pencil-alt fa-lg mr-2"></i>
+                  <span>แก้ไขข้อมูล</span>
               </a>
           </div>
+        </div>
+        <br><br><br>
+       
+
+        <!-- Bottom Navigation -->
+        <div class="fixed bottom-0 left-0 right-0 bg-blue-200 shadow-lg">
+            <div class="flex justify-around py-4">
+                <!-- Home Button -->
+                <a href="index.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
+                    <svg class="h-8 w-8 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
+                        <polyline points="17 2 12 7 7 2" />
+                    </svg>
+                    <span class="text-xs font-medium">หน้าหลัก</span>
+                </a>
+
+                <!-- Waiting Button -->
+                <a href="waiting.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
+                    <svg class="h-8 w-8 text-red-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" />
+                        <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" />
+                        <line x1="12" y1="12" x2="20" y2="7.5" />
+                        <line x1="12" y1="12" x2="12" y2="21" />
+                        <line x1="12" y1="12" x2="4" y2="7.5" />
+                        <line x1="16" y1="5.25" x2="8" y2="9.75" />
+                    </svg>
+                    <span class="text-xs font-medium">รอรับ</span>
+                </a>
+
+                <!-- History Button -->
+                <a href="history.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
+                    <svg class="h-8 w-8 text-red-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" />
+                        <path d="M15 4.55a8 8 0 0 0 -6 14.9m0 -4.45v5h-5" />
+                        <path d="M13 19.95a8 8 0 0 0 5.3 -12.8" stroke-dasharray=".001 4.13" />
+                    </svg>
+                    <span class="text-xs font-medium">ประวัติ</span>
+                </a>
+
+                <!-- Account Button -->
+                <a href="account.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
+                    <svg class="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-xs font-medium">บัญชี</span>
+                </a>
+            </div>
         </div>
 
     </div>

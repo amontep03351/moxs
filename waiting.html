@@ -25,54 +25,71 @@
 </head>
 
 <body class="bg-gray-100">
+      <!-- Top Section -->
+      <div class="bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 text-white p-6 rounded-b-3xl shadow-lg">
+      <div class="flex flex-col sm:flex-row justify-between items-center">
+        <h1 class="text-3xl sm:text-4xl font-extrabold">สวัสดีตอนบ่าย</h1>
+        <div class="mt-4 sm:mt-0 bg-white rounded-full p-2 shadow-2xl transform transition hover:scale-105">
+          <img src="img/logo.png" alt="User Icon" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full">
+        </div>
+      </div>
+    
+    </div>
     <div class="container mx-auto p-4">
-        <h1 class="text-4xl font-bold mb-6 text-center text-gray-800">รอรับผู้ซื้อ</h1>
+        
 
-        <!-- Card Section for Buyers -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Buyer Card 1 -->
-            <div class="bg-white shadow-lg rounded-lg p-4">
-                <h2 class="text-xl font-semibold text-gray-800">ผู้ซื้อ: ร้านขยะดี</h2>
-                <p class="text-gray-600">ประเภทขยะ: พลาสติก</p>
-                <p class="text-gray-600">สถานะ: กำลังเดินทาง</p>
-                <p class="text-gray-600">ระยะทาง: 2 กม.</p>
-                <p class="text-gray-600">เวลาที่เหลือ: 15 นาที</p>
-                <div class="flex justify-between items-center mt-4">
+        <!-- Outer Div for Card Section -->
+        <div class="bg-white shadow-lg rounded-lg p-6"> 
+          <h2 class="text-3xl font-semibold mb-4 text-gray-800">รอรับผู้ซื้อ</h2>
+            <!-- Card Section for Buyers -->
+            <ul class="space-y-4">
+                <!-- Buyer Item 1 -->
+                <li class="flex justify-between bg-gray-50 p-4 rounded-lg shadow transition hover:shadow-md hover:bg-gray-100">
+                  <div class="flex flex-col"> 
+                    <h3 class="font-semibold text-lg text-blue-600">ผู้ซื้อ: ร้านขยะดี</h3>
+                    <p class="text-gray-600">ประเภทขยะ: พลาสติก</p>
+                    <p class="text-gray-600">สถานะ: กำลังเดินทาง</p>
+                    <p class="text-gray-600">ระยะทาง: 2 กม.</p>
+                    <p class="text-gray-600">เวลาที่เหลือ: 15 นาที</p>
+                  </div>
+                  <div class="flex items-center space-x-2">
                     <span class="text-green-500 font-semibold">฿500</span>
                     <button class="bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-500 transition">ติดต่อ</button>
-                </div>
-            </div>
-
-            <!-- Buyer Card 2 -->
-            <div class="bg-white shadow-lg rounded-lg p-4">
-                <h2 class="text-xl font-semibold text-gray-800">ผู้ซื้อ: ขยะรีไซเคิลเพื่อนบ้าน</h2>
-                <p class="text-gray-600">ประเภทขยะ: กระดาษ</p>
-                <p class="text-gray-600">สถานะ: กำลังเดินทาง</p>
-                <p class="text-gray-600">ระยะทาง: 1.5 กม.</p>
-                <p class="text-gray-600">เวลาที่เหลือ: 10 นาที</p>
-                <div class="flex justify-between items-center mt-4">
-                    <span class="text-green-500 font-semibold">฿300</span>
+                  </div> 
+                </li>
+                  <!-- Buyer Item 2 -->
+                <li class="flex justify-between bg-gray-50 p-4 rounded-lg shadow transition hover:shadow-md hover:bg-gray-100">
+                  <div class="flex flex-col"> 
+                    <h3 class="font-semibold text-lg text-blue-600">ผู้ซื้อ: ร้านขยะดี</h3>
+                    <p class="text-gray-600">ประเภทขยะ: พลาสติก</p>
+                    <p class="text-gray-600">สถานะ: กำลังเดินทาง</p>
+                    <p class="text-gray-600">ระยะทาง: 2 กม.</p>
+                    <p class="text-gray-600">เวลาที่เหลือ: 15 นาที</p>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <span class="text-green-500 font-semibold">฿500</span>
                     <button class="bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-500 transition">ติดต่อ</button>
-                </div>
-            </div>
-
-            <!-- Buyer Card 3 -->
-            <div class="bg-white shadow-lg rounded-lg p-4">
-                <h2 class="text-xl font-semibold text-gray-800">ผู้ซื้อ: บริษัทรีไซเคิลจำกัด</h2>
-                <p class="text-gray-600">ประเภทขยะ: โลหะ</p>
-                <p class="text-gray-600">สถานะ: กำลังเดินทาง</p>
-                <p class="text-gray-600">ระยะทาง: 3 กม.</p>
-                <p class="text-gray-600">เวลาที่เหลือ: 20 นาที</p>
-                <div class="flex justify-between items-center mt-4">
-                    <span class="text-green-500 font-semibold">฿250</span>
+                  </div> 
+                </li>
+                <li class="flex justify-between bg-gray-50 p-4 rounded-lg shadow transition hover:shadow-md hover:bg-gray-100">
+                  <div class="flex flex-col"> 
+                    <h3 class="font-semibold text-lg text-blue-600">ผู้ซื้อ: ร้านขยะดี</h3>
+                    <p class="text-gray-600">ประเภทขยะ: พลาสติก</p>
+                    <p class="text-gray-600">สถานะ: กำลังเดินทาง</p>
+                    <p class="text-gray-600">ระยะทาง: 2 กม.</p>
+                    <p class="text-gray-600">เวลาที่เหลือ: 15 นาที</p>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <span class="text-green-500 font-semibold">฿500</span>
                     <button class="bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-500 transition">ติดต่อ</button>
-                </div>
-            </div>
+                  </div> 
+                </li>
+ 
+            </ul>
         </div>
-
+        <br><br><br>
         <!-- Back Navigation Button -->
-           <!-- Bottom Navigation -->
-           <div class="fixed bottom-0 left-0 right-0 bg-blue-200 shadow-lg">
+        <div class="fixed bottom-0 left-0 right-0 bg-blue-200 shadow-lg">
             <div class="flex justify-around py-4">
                 <!-- Home Button -->
                 <a href="index.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
@@ -114,7 +131,7 @@
                     <span class="text-xs font-medium">บัญชี</span>
                 </a>
             </div>
-          </div>
+        </div>
     </div>
 </body>
 

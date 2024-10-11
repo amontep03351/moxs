@@ -7,41 +7,49 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-  
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100;400;600&display=swap" rel="stylesheet">
     <title>ประวัติ</title>
     <style>
-       body {
-          font-family: "Sarabun", sans-serif;
-          font-weight: 100;
-          font-style: normal;
-      }
-      /* Animation for button hover effect */
-      .hover-grow:hover {
-        transform: scale(1.05);
-        transition: transform 0.3s ease;
-      }
+        body {
+            font-family: "Sarabun", sans-serif;
+        }
+
+        .hover-grow:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
         .star {
-            color: #FFD700; /* สีทองสำหรับดาว */
+            color: #FFD700;
         }
     </style>
 </head>
 
 <body class="bg-gray-100">
+     <!-- Top Section -->
+  <div class="bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 text-white p-6 rounded-b-3xl shadow-lg">
+    <div class="flex flex-col sm:flex-row justify-between items-center">
+      <h1 class="text-3xl sm:text-4xl font-extrabold">สวัสดีตอนบ่าย</h1>
+      <div class="mt-4 sm:mt-0 bg-white rounded-full p-2 shadow-2xl transform transition hover:scale-105">
+        <img src="img/logo.png" alt="User Icon" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full">
+      </div>
+    </div>
+ 
+  </div>
+
     <div class="container mx-auto p-4">
-        <h1 class="text-4xl font-bold mb-6 text-center text-gray-800">ประวัติการซื้อขายขยะรีไซเคิล</h1>
 
         <!-- History List -->
         <div class="bg-white shadow-lg rounded-lg p-6">
             <h2 class="text-3xl font-semibold mb-4 text-gray-800">ประวัติการขาย</h2>
             <ul class="space-y-4">
                 <!-- History Item 1 -->
-                <li class="flex justify-between bg-gray-50 p-4 rounded-lg shadow transition hover:shadow-md">
+                <li class="flex justify-between bg-gray-50 p-4 rounded-lg shadow transition hover:shadow-md hover:bg-gray-100">
                     <div class="flex flex-col">
-                        <h3 class="font-semibold text-lg">ผู้ซื้อ: ร้านขยะดี</h3>
+                        <h3 class="font-semibold text-lg text-blue-600">ผู้ซื้อ: ร้านขยะดี</h3>
                         <p class="text-gray-600">วันที่: 01/01/2566</p>
-                        <p>ประเภทขยะ: พลาสติก</p>
-                        <p>จำนวน: 50 กิโลกรัม</p>
+                        <p class="text-gray-600">ประเภทขยะ: พลาสติก</p>
+                        <p class="text-gray-600">จำนวน: 50 กิโลกรัม</p>
                     </div>
                     <div class="flex items-center space-x-2">
                         <span class="text-green-500 font-semibold">฿500</span>
@@ -56,12 +64,12 @@
                 </li>
 
                 <!-- History Item 2 -->
-                <li class="flex justify-between bg-gray-50 p-4 rounded-lg shadow transition hover:shadow-md">
+                <li class="flex justify-between bg-gray-50 p-4 rounded-lg shadow transition hover:shadow-md hover:bg-gray-100">
                     <div class="flex flex-col">
-                        <h3 class="font-semibold text-lg">ผู้ซื้อ: ขยะรีไซเคิลเพื่อนบ้าน</h3>
+                        <h3 class="font-semibold text-lg text-blue-600">ผู้ซื้อ: ขยะรีไซเคิลเพื่อนบ้าน</h3>
                         <p class="text-gray-600">วันที่: 15/01/2566</p>
-                        <p>ประเภทขยะ: กระดาษ</p>
-                        <p>จำนวน: 30 กิโลกรัม</p>
+                        <p class="text-gray-600">ประเภทขยะ: กระดาษ</p>
+                        <p class="text-gray-600">จำนวน: 30 กิโลกรัม</p>
                     </div>
                     <div class="flex items-center space-x-2">
                         <span class="text-green-500 font-semibold">฿300</span>
@@ -76,12 +84,12 @@
                 </li>
 
                 <!-- History Item 3 -->
-                <li class="flex justify-between bg-gray-50 p-4 rounded-lg shadow transition hover:shadow-md">
+                <li class="flex justify-between bg-gray-50 p-4 rounded-lg shadow transition hover:shadow-md hover:bg-gray-100">
                     <div class="flex flex-col">
-                        <h3 class="font-semibold text-lg">ผู้ซื้อ: บริษัทรีไซเคิลจำกัด</h3>
+                        <h3 class="font-semibold text-lg text-blue-600">ผู้ซื้อ: บริษัทรีไซเคิลจำกัด</h3>
                         <p class="text-gray-600">วันที่: 20/01/2566</p>
-                        <p>ประเภทขยะ: โลหะ</p>
-                        <p>จำนวน: 25 กิโลกรัม</p>
+                        <p class="text-gray-600">ประเภทขยะ: โลหะ</p>
+                        <p class="text-gray-600">จำนวน: 25 กิโลกรัม</p>
                     </div>
                     <div class="flex items-center space-x-2">
                         <span class="text-green-500 font-semibold">฿250</span>
@@ -97,9 +105,8 @@
             </ul>
         </div>
 
-        <!-- Navigation Buttons -->
-         <!-- Bottom Navigation -->
-         <div class="fixed bottom-0 left-0 right-0 bg-blue-200 shadow-lg">
+        <!-- Bottom Navigation -->
+        <div class="fixed bottom-0 left-0 right-0 bg-blue-200 shadow-lg">
             <div class="flex justify-around py-4">
                 <!-- Home Button -->
                 <a href="index.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
@@ -109,7 +116,7 @@
                     </svg>
                     <span class="text-xs font-medium">หน้าหลัก</span>
                 </a>
-  
+
                 <!-- Waiting Button -->
                 <a href="waiting.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
                     <svg class="h-8 w-8 text-red-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -122,26 +129,27 @@
                     </svg>
                     <span class="text-xs font-medium">รอรับ</span>
                 </a>
-  
+
                 <!-- History Button -->
                 <a href="history.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
                     <svg class="h-8 w-8 text-red-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" />
                         <path d="M15 4.55a8 8 0 0 0 -6 14.9m0 -4.45v5h-5" />
-                        <path d="M13 19.95a8 8 0 0 0 5.3 -12.8" stroke-dasharray=".001 4.13" />
+                        <path d="M13 19.95a8 8 0 0 0 5.3 -12.8" stroke-linecap="round" />
                     </svg>
                     <span class="text-xs font-medium">ประวัติ</span>
                 </a>
-  
+
                 <!-- Account Button -->
                 <a href="account.html" class="flex flex-col items-center text-black hover:bg-blue-700 py-2 px-4 rounded-lg transition duration-300">
-                    <svg class="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg class="h-8 w-8 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 9v3m0 4v1.5a2.5 2.5 0 0 1 -5 0v-1.5" />
+                        <path d="M9 12a6 6 0 1 1 12 0m-6 3v1.5a2.5 2.5 0 0 1 -5 0v-1.5" />
                     </svg>
                     <span class="text-xs font-medium">บัญชี</span>
                 </a>
             </div>
-          </div>
+        </div>
     </div>
 </body>
 
